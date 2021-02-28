@@ -13,5 +13,9 @@ Rails.application.routes.draw do
     get "/comic_store/:id" => "comic_store#show"
     #update
     patch "/comic_store/:id" => "comic_store#patch"
+    #create
+    post "/comic_store" => "comic_store#create"
+    #delete
+    delete "/comic_store/:id" => "comic_store#destroy"
   end
 end

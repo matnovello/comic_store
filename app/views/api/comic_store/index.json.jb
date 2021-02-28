@@ -1,1 +1,9 @@
-@comics
+@comics.map do |comic|
+  {
+    id: comic.id,
+    name: comic.name,
+    price: comic.price,
+    year: comic.year,
+    rarity: comic.rarity,
+  }
+end

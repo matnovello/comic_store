@@ -1,7 +1,7 @@
 {
-  id: @id,
-  name: @name,
-  year: @year,
-  price: @price,
-  rarity: @rarity,
+  id: @comic.id,
+  name: @comic.name,
+  year: @comic.year,
+  price: @comic.price,
+  rarity: @comic.rarity,
 }
