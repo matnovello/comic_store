@@ -28,7 +28,16 @@ class Api::ComicStoreController < ApplicationController
   end
 
   def create
-    @comic = Comic.new(name: params[:name], year: params[:year], price: params[:price], rarity: params[:rarity])
+    @random_year = Random.new.rand(1990..2000)
+    @random_rarity = Random.new.rand(1..10)
+    @random_price = Random.new.rand(20..30)
+
+    @comic = Comic.new({
+      name: params[:name] || Faker::TvShows::RickAndMorty.character,
+      year: params[:year] || @random_year,
+      price: params[:price] || @random_price,
+      rarity: params[:rarity] || @random_rarity,
+    })
     @comic.save
     render "show.json.jb"
   end
