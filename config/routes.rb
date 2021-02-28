@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   namespace :api do
     #index
     get "/comic_store" => "comic_store#index"
+    #show
+    get "/comic_store/:id" => "comic_store#show"
+    #update
+    patch "/comic_store/:id" => "comic_store#patch"
   end
 end

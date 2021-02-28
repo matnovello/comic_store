@@ -1,0 +1,7 @@
+{
+  id: @id,
+  name: @name,
+  year: @year,
+  price: @price,
+  rarity: @rarity,
+}
